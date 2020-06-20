@@ -7,12 +7,16 @@
     <h1>Hello World</h1>
     <p><code>My name is <em>Governor...</em> I write code for a living</code><div id="clock"></div></p>
     <script type="text/javascript">
-      const dt = new Date();
+      const dts = new Date();
       let clock = document.getElementById("clock");
       clock.innerText = "Date";
       let t = setInterval(() => {
-        clock.innerText = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds(); 
+        updateTime(dts);
       }, 1000);
+      
+      function updateTime(dt) {
+         clock.innerText = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds(); 
+      }
     </script>
   </body>
 </html>
