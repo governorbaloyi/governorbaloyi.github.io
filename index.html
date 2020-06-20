@@ -7,10 +7,11 @@
     <h1>Hello World</h1>
     <p><code>My name is <em>Governor...</em> I write code for a living</code><div id="clock"></div></p>
     <script type="text/javascript">
+      const dt = new Date();
       let clock = document.getElementById("clock");
-      clock.innerText = Date.Now;
+      clock.innerText = "";
       let t = setInterval(() => {
-        console.log("Hello World");
+        clock.innerText = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds(); 
       }, 1000);
     </script>
   </body>
